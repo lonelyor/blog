@@ -47,6 +47,7 @@ title = "lonelyor 的博客"
         tabWidth = 4
     [markup.goldmark.renderer]
         unsafe = true
+        
     [markup.tableOfContents]
         startLevel = 2
         endLevel = 3
