@@ -2,6 +2,7 @@ baseURL = 'https://blog.lonelyor.com/'
 theme = "noir"
 defaultContentLanguage = "zh"
 languageCode = "zh-cn"
+hasCJKLanguage = true # 开启中日韩文字优化，这对中文搜索和字数统计至关重要
 title = "lonelyor 的博客"
 
 # --- 导航菜单 (直接使用中文) ---
@@ -29,6 +30,10 @@ title = "lonelyor 的博客"
         name = "rss"
         icon = "rss"
         url = "/index.xml"
+
+    # 强制默认主题模式 (取决于主题具体的参数名，通常是这两个之一)
+    defaultTheme = "dark"
+    themeMode = "dark" 
 
 # --- Markdown 与代码高亮 (针对 Rust/技术文章优化) ---
 [markup]
@@ -64,3 +69,17 @@ title = "lonelyor 的博客"
 [services]
     [services.rss]
         limit = 20
+
+# 2. 多语言定义
+[languages]
+  [languages.zh]
+    languageName = "中文"
+    contentDir = "content" # 你的主战场
+    weight = 1
+    title = "lonelyor 的技术净土"
+
+  [languages.en]
+    languageName = "English"
+    contentDir = "content/en" # 英文版放在子文件夹
+    weight = 2
+    title = "lonelyor's Security Lab"
