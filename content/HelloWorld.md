@@ -22,4 +22,6 @@ description = ""
 十年前写过Blog，后来断更了很久，现在重写。
 
 发布流程：
-1. hugo
+本地编写并发布（hugo new xxx.md / hugo）
+更新远程git仓库（add . / commit -m / push origin main）
+cloudflare自动构建并发布（https://developers.cloudflare.com/workers/ci-cd/builds/）

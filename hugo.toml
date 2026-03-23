@@ -17,8 +17,8 @@ title = "lonelyor 的博客"
 # --- 全局参数配置 ---
 [params]
     author = "lonelyor"
-    description = "专注于编程与技术的个人博客。"
-    keywords = ["编程", "技术", "AI", "安全", "自动化", "Dify", "Rust"]
+    description = "闭门即是深山，读书随处净土。"
+    keywords = ["编程", "技术", "AI", "安全", "自动化", "Dify", "Rust", "黑客", "博客", "lonelyor", "技术分享", "编程笔记", "安全研究", "网络安全", "渗透测试", "漏洞分析"]
     
     # 社交扩展
     [[params.social]]
