@@ -1,0 +1,12 @@
+# 忽略 Hugo 自动生成的静态文件夹（这是最占用空间且没必要上传的）
+/public/
+/resources/_gen/
+
+# 忽略本地缓存和临时文件
+.hugo_build.temp
+hugo_stats.json
+assets/jsconfig.json
+
+# 忽略操作系统垃圾文件
+.DS_Store
+Thumbs.db
