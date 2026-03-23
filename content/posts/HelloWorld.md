@@ -21,7 +21,7 @@ description = ""
 
 十年前写过Blog，后来断更了很久，现在重写。  
 
-发布流程：  
+新文章发布流程：  
 本地编写（hugo new xxx.md）  
 格式化md并发布（python fmt_md.py / hugo）  
 更新远程git仓库（git add . / commit -m / push origin main）  
