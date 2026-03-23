@@ -27,7 +27,7 @@ title = "lonelyor 的博客"
         link = "https://github.com/lonelyor" # 对应报错中的 .Site.Params.Author.link
 
     description = "闭门即是深山，读书随处净土。"
-    keywords = ["编程", "技术", "AI", "安全", "自动化", "Dify", "Rust", "黑客", "博客", "lonelyor", "技术分享", "编程笔记", "安全研究", "网络安全", "渗透测试", "漏洞分析"]
+    keywords = ["编程", "技术", "AI", "安全", "自动化", "Dify", "Rust", "黑客", "博客", "lonelyor", "技术分享", "编程笔记", "安全研究", "网络安全", "渗透测试", "漏洞分析", "Web3", "区块链", "加密货币"]
     
     # 社交扩展
     [params.social]
@@ -36,7 +36,38 @@ title = "lonelyor 的博客"
 
     # 强制默认主题模式
     defaultTheme = "dark"
+    title = "lonelyor's Blog"
+    description = "This is lonelyor's Blog"
+# 2. 首页中心显示的文字 (这是解决 "My cool site" 的关键)
+    [params.header]
+        [params.header.title]
+        # LOGO 的 URL
+        logo = ""
+        # title name
+        # 标题名称
+        name = "lonelyor's Blog"
+        # you can add extra information before the name (HTML format is supported), such as icons
+        # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
+        pre = ""
+        # you can add extra information after the name (HTML format is supported), such as icons
+        # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
+        post = ""
 
+    [params.list]
+      [params.app]
+        title = "lonelyor's Blog"
+        # Android browser theme color
+        # Android 浏览器主题色
+        themeColor = "#ffffff"
+        # Safari mask icon color
+        # Safari 图标颜色
+        iconColor = "#5bbad5"
+        # Windows v8-11 tile color
+        # Windows v8-11 磁贴颜色
+        tileColor = "#da532c"
+    [params.home]
+      [params.home.profile]
+        subtitle = "This is my cool site"
 # --- Markdown 与代码高亮 ---
 [markup]
     [markup.highlight]
@@ -69,20 +100,6 @@ title = "lonelyor 的博客"
     priority = 0.5
     filename = 'sitemap.xml'
 
-# 2. 多语言定义
-[languages]
-  [languages.zh]
-    languageName = "中文"
-    contentDir = "content"
-    weight = 1
-    title = "lonelyor 的技术净土"
-
-  [languages.en]
-    languageName = "English"
-    contentDir = "content/en"
-    weight = 2
-    title = "lonelyor's Security Lab"
-
 # --- 全局 RSS 路径配置 ---
 [outputs]
     home = ["HTML", "RSS"]
@@ -90,3 +107,4 @@ title = "lonelyor 的博客"
 [services]
     [services.rss]
         limit = 20
+
