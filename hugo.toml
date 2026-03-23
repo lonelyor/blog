@@ -1,11 +1,11 @@
 baseURL = 'https://blog.lonelyor.com/'
-theme = "noir"
+theme = "LoveIt"
 defaultContentLanguage = "zh"
 languageCode = "zh-cn"
-hasCJKLanguage = true # 开启中日韩文字优化，这对中文搜索和字数统计至关重要
+hasCJKLanguage = true # 开启中日韩文字优化
 title = "lonelyor 的博客"
 
-# --- 导航菜单 (直接使用中文) ---
+# --- 导航菜单 ---
 [[menu.main]]
     name = "首页"
     url = "/"
@@ -14,28 +14,30 @@ title = "lonelyor 的博客"
     name = "归档"
     url = "/posts/"
     weight = 2
+[[menu.main]]
+    name = "RSS订阅"
+    url = "/index.xml"
+    weight = 3
 
 # --- 全局参数配置 ---
 [params]
-    author = "lonelyor"
+    # 修正点：将 author 从 string 置换为 object 结构
+    [params.author]
+        name = "lonelyor"
+        link = "https://github.com/lonelyor" # 对应报错中的 .Site.Params.Author.link
+
     description = "闭门即是深山，读书随处净土。"
     keywords = ["编程", "技术", "AI", "安全", "自动化", "Dify", "Rust", "黑客", "博客", "lonelyor", "技术分享", "编程笔记", "安全研究", "网络安全", "渗透测试", "漏洞分析"]
     
     # 社交扩展
-    [[params.social]]
-        name = "github"
-        icon = "github"
-        url = "https://github.com/lonelyor"
-    [[params.social]]
-        name = "rss"
-        icon = "rss"
-        url = "/index.xml"
+    [params.social]
+        GitHub = "lonelyor"
+        RSS = true
 
-    # 强制默认主题模式 (取决于主题具体的参数名，通常是这两个之一)
+    # 强制默认主题模式
     defaultTheme = "dark"
-    themeMode = "dark" 
 
-# --- Markdown 与代码高亮 (针对 Rust/技术文章优化) ---
+# --- Markdown 与代码高亮 ---
 [markup]
     [markup.highlight]
         anchorLineNos = true
@@ -47,7 +49,7 @@ title = "lonelyor 的博客"
         tabWidth = 4
     [markup.goldmark.renderer]
         unsafe = true
-        
+
     [markup.tableOfContents]
         startLevel = 2
         endLevel = 3
@@ -71,25 +73,20 @@ title = "lonelyor 的博客"
 [languages]
   [languages.zh]
     languageName = "中文"
-    contentDir = "content" # 你的主战场
+    contentDir = "content"
     weight = 1
     title = "lonelyor 的技术净土"
 
   [languages.en]
     languageName = "English"
-    contentDir = "content/en" # 英文版放在子文件夹
+    contentDir = "content/en"
     weight = 2
     title = "lonelyor's Security Lab"
 
 # --- 全局 RSS 路径配置 ---
 [outputs]
-    home = ["HTML", "RSS"]  # 仅在首页生成 RSS 文件
+    home = ["HTML", "RSS"]
 
 [services]
     [services.rss]
         limit = 20
-
-[[menu.main]]
-    name = "RSS订阅"
-    url = "/index.xml"      # Hugo 默认生成的 RSS 文件名是 index.xml
-    weight = 3
