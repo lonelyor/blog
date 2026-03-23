@@ -1,14 +1,29 @@
-# 忽略 Hugo 自动生成的静态文件夹（这是最占用空间且没必要上传的）
+# --- Hugo 核心生成物 (禁止上传，占用空间大) ---
 /public/
 /resources/_gen/
+/hugo_cache/
+/static/admin/
 
-# 忽略本地缓存和临时文件
+# --- 构建锁与临时状态文件 ---
+.hugo_build.lock
 .hugo_build.temp
 hugo_stats.json
 assets/jsconfig.json
-.hugo_build.lock
-fmt_md.py
 
-# 忽略操作系统垃圾文件
+# --- 脚本与本地自动化工具 ---
+# 你提到的格式化脚本，建议留在本地执行
+fmt_md.py
+*.bak
+*.temp
+
+# --- 操作系统与编辑器残留 ---
 .DS_Store
 Thumbs.db
+*.log
+# IDE 配置文件 (VS Code / JetBrains)
+.vscode/
+.idea/
+
+# --- 环境变量与私密信息 ---
+.env
+config.local.toml
